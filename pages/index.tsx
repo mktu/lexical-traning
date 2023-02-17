@@ -24,11 +24,7 @@ Home.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout
       title='Lexical Traning'
-      description={(
-        <>
-          <p>Lexicalの練習用サイトです</p>
-        </>
-      )}
+      description={'Lexicalの練習用サイトです'}
     >
       {page}
     </Layout>
