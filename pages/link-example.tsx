@@ -32,10 +32,11 @@ LinkExample.getLayout = function getLayout(page: ReactElement) {
     return (
         <Layout
             title='🔥 Lexicalを使ってリッチエディタを実現する（Link編） 🔥'
+            ogTitle='Lexicalを使ってリッチエディタを実現する（Link編)'
             description='このページでは、リンクの挿入 / エディタ上のリンク自動変換 / リンクカードの表示が行えます'
         >
             {page}
-        </Layout>
+        </Layout >
     );
 };
 

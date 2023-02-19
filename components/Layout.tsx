@@ -6,20 +6,21 @@ import Head from 'next/head';
 type Props = {
     children: ReactNode,
     title: string,
+    ogTitle?: string,
     description: string,
 }
 
 const vercelUrl = 'https://lexical-traning.vercel.app/api/og';
 
-const Layout: FC<Props> = ({ children, title, description }) => (
+const Layout: FC<Props> = ({ children, title, description, ogTitle = title }) => (
     <>
         <Head>
-            <title>{title}</title>
+            <title>{ogTitle}</title>
             <meta name='description' content={description} />
-            <meta property="og:title" content={title} />
+            <meta property="og:title" content={ogTitle} />
             <meta property="og:type" content="website" />
             <meta property="og:image" content={vercelUrl} />
-            <meta name="twitter:title" content={title} />
+            <meta name="twitter:title" content={ogTitle} />
             <meta name="twitter:description" content={description} />
         </Head>
         <div className='flex w-screen flex-col items-center gap-6 py-5'>
