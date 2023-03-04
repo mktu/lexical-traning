@@ -4,6 +4,7 @@ Lexical practice repository.
 Currently, the following functions are implemented
 
 - Link
+- Image
 
 ## Getting Started
 
@@ -21,4 +22,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Related Articles
 
-TBD
+[Lexicalを使ってリッチエディタを実現する（Link編）](https://zenn.dev/mktu/articles/6ff46411458823)
