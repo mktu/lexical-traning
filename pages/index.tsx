@@ -15,6 +15,11 @@ const Home: NextPageWithLayout = () => {
             Lexicalを使ってリッチエディタを実現する（Link編）
           </Link>
         </li>
+        <li className='list-disc'>
+          <Link href={'/image-example'}>
+            Lexicalを使ってリッチエディタを実現する（画像編）
+          </Link>
+        </li>
       </ul>
     </div>
   );

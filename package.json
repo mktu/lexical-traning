@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/storage": "6.9.3",
     "@headlessui/react": "1.7.10",
     "@lexical/react": "0.7.6",
     "@next/font": "13.1.6",
