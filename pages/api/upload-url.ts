@@ -2,11 +2,15 @@ import { Storage } from '@google-cloud/storage';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    if (!process.env.PRIVATE_KEY) {
+        res.status(500).json({ message: 'no env variables' });
+        return;
+    }
     const storage = new Storage({
         projectId: process.env.PROJECT_ID,
         credentials: {
             client_email: process.env.CLIENT_EMAIL,
-            private_key: process.env.PRIVATE_KEY,
+            private_key: process.env.PRIVATE_KEY.split(String.raw`\n`).join('\n'),
         },
     });
 
